@@ -11799,7 +11799,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[416]:</div>
+<div class="prompt input_prompt">In&nbsp;[153]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: import相关库</span>
@@ -11906,7 +11906,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[417]:</div>
+<div class="prompt input_prompt">In&nbsp;[154]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 1.1.1 TODO：</span>
@@ -11919,6 +11919,9 @@ $$</p>
 <span class="c1">#Define vector 2v-w as t</span>
 <span class="n">t</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">v</span><span class="o">-</span><span class="n">w</span>
 
+<span class="c1">#Define vector 2v</span>
+<span class="n">v_2</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">v</span>
+
 <span class="c1"># Creates axes of plot referenced &#39;ax&#39;</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">()</span>
 
@@ -11926,13 +11929,16 @@ $$</p>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;or&#39;</span><span class="p">)</span>
 
 <span class="c1"># Plots vector v as blue arrow starting at origin 0,0</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">*</span><span class="n">v</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">head_width</span><span class="o">=</span><span class="mf">0.20</span><span class="p">,</span><span class="n">head_length</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="c1">#ax.arrow(0,0,*v,color=&#39;b&#39;,head_width=0.20,head_length=0.25)</span>
 
 <span class="c1"># Plots vector w as blue arrow starting at origin 0,0</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">*</span><span class="n">w</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="n">head_width</span><span class="o">=</span><span class="mf">0.20</span><span class="p">,</span><span class="n">head_length</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">*</span><span class="n">w</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="n">head_width</span><span class="o">=</span><span class="mf">0.20</span><span class="p">,</span><span class="n">head_length</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
 
 <span class="c1"># Plots vector t as blue arrow starting at origin 0,0</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">*</span><span class="n">t</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="n">head_width</span><span class="o">=</span><span class="mf">0.20</span><span class="p">,</span><span class="n">head_length</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">w</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="o">*</span><span class="n">t</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="n">head_width</span><span class="o">=</span><span class="mf">0.20</span><span class="p">,</span><span class="n">head_length</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+
+<span class="c1"># Plots vector 2v as blue arrow starting at origin 0,0</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">*</span><span class="n">v_2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">head_width</span><span class="o">=</span><span class="mf">0.20</span><span class="p">,</span><span class="n">head_length</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
 
 <span class="c1"># Sets limit for plot for x-axis</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
@@ -11942,10 +11948,10 @@ $$</p>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">major_xticks</span><span class="p">)</span>
 
 <span class="c1"># Sets limit for plot for y-axis</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
 
 <span class="c1"># Set major ticks for y-axis</span>
-<span class="n">major_yticks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">major_yticks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">major_yticks</span><span class="p">)</span>
 
 <span class="c1"># Creates gridlines for only major tick marks</span>
@@ -11983,7 +11989,7 @@ $$</p>
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -12028,7 +12034,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[418]:</div>
+<div class="prompt input_prompt">In&nbsp;[155]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">check_vector_span</span><span class="p">(</span><span class="n">set_of_vectors</span><span class="p">,</span> <span class="n">vector_to_check</span><span class="p">):</span>
@@ -12056,7 +12062,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[419]:</div>
+<div class="prompt input_prompt">In&nbsp;[156]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">vw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="mf">0.1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
@@ -12088,7 +12094,7 @@ Scalars in s: [2.63157895 6.26315789]
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[419]:</div>
+<div class="prompt output_prompt">Out[156]:</div>
 
 
 
@@ -12105,7 +12111,7 @@ Scalars in s: [2.63157895 6.26315789]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[420]:</div>
+<div class="prompt input_prompt">In&nbsp;[157]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 1.1.2 TODO</span>
@@ -12179,7 +12185,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[421]:</div>
+<div class="prompt input_prompt">In&nbsp;[158]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 1.2.1 TODO</span>
@@ -12207,7 +12213,7 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[421]:</div>
+<div class="prompt output_prompt">Out[158]:</div>
 
 
 
@@ -12249,7 +12255,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[422]:</div>
+<div class="prompt input_prompt">In&nbsp;[159]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 1.2.2 TODO</span>
@@ -12264,7 +12270,7 @@ $$</p>
 <span class="n">AB</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">)</span>
 <span class="n">AC</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">C</span><span class="p">)</span>
 
-<span class="n">AB_AC</span> <span class="o">==</span> <span class="n">AB</span><span class="o">+</span><span class="n">AC</span>
+<span class="n">A_BC</span> <span class="o">==</span> <span class="n">AB</span><span class="o">+</span><span class="n">AC</span>
 </pre></div>
 
 </div>
@@ -12277,7 +12283,7 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[422]:</div>
+<div class="prompt output_prompt">Out[159]:</div>
 
 
 
@@ -12356,13 +12362,90 @@ $$
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[160]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#用numpy证明</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="mf">0.1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="o">-</span><span class="mi">6</span><span class="p">]])</span>
+<span class="n">A_I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">A_I</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[160]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[2.63157895],
+       [6.26315789]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[161]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A_I</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[161]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 0.52631579, -0.52631579],
+       [ 0.05263158, -1.05263158]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>回答： 根据2.1证明的公式可以得出，方程式一中x = $2^{-1}(y-1)$，
-方程式二中x = $\frac{1}{10}^{-1}(y-6)$，
-然后联合两个方程先求y可以得出y=6.3，进而x=2.6，与答案一致</p>
+<p>$$
+A^{-1}=
+\begin{bmatrix}
+    0.52631579 &amp; -0.52631579 \\\\
+    0.05263158 &amp; -1.05263158
+\end{bmatrix}
+$$</p>
 
 </div>
 </div>
@@ -12379,30 +12462,11 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[423]:</div>
+<div class="prompt input_prompt">In&nbsp;[162]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 2.2.2 TODO</span>
-<span class="k">def</span> <span class="nf">diagonal_matrix</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
-    <span class="kn">import</span> <span class="nn">random</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
-        <span class="n">element</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
-        <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">element</span>
-    <span class="k">return</span> <span class="n">m</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[424]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">diagonal_matrix</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
 <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
 <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 </pre></div>
@@ -12417,13 +12481,13 @@ $$
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[424]:</div>
+<div class="prompt output_prompt">Out[162]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([42., 42.,  3., 12., 15., 54.])</pre>
+<pre>array([18, 28,  5, 12, 35, 72])</pre>
 </div>
 
 </div>
@@ -12460,55 +12524,25 @@ B=
     9 &amp; 10
 \end{bmatrix}
 $$</p>
-<p>$$
-C=
-\begin{bmatrix}
-    2 &amp; 17 \\\\
-    1 &amp; 5
-\end{bmatrix}
-$$</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[425]:</div>
+<div class="prompt input_prompt">In&nbsp;[163]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 3 TODO</span>
-<span class="k">def</span> <span class="nf">diagonal_sum</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
-    <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
-            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span><span class="p">:</span>
-                <span class="nb">sum</span> <span class="o">+=</span> <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>
-    <span class="k">return</span> <span class="nb">sum</span>
-
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">29</span><span class="p">,</span><span class="mi">3</span><span class="p">]])</span>
 <span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">8</span><span class="p">],[</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]])</span>
 <span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">17</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">]])</span>
 
-<span class="n">ABC</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">)</span>
-<span class="n">CAB</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">)</span>
-<span class="n">BCA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">B</span><span class="p">,</span><span class="n">C</span><span class="p">,</span><span class="n">A</span><span class="p">)</span>    
-</pre></div>
+<span class="n">TrABC</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">B</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">C</span><span class="p">))</span>
+<span class="n">TrCAB</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>
+<span class="n">TrBCA</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="n">B</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">C</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
 
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[426]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sum_ABC</span> <span class="o">=</span> <span class="n">diagonal_sum</span><span class="p">(</span><span class="n">ABC</span><span class="p">)</span>
-<span class="n">sum_CAB</span> <span class="o">=</span> <span class="n">diagonal_sum</span><span class="p">(</span><span class="n">CAB</span><span class="p">)</span>
-<span class="n">sum_BCA</span> <span class="o">=</span> <span class="n">diagonal_sum</span><span class="p">(</span><span class="n">BCA</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">sum_ABC</span> <span class="o">==</span> <span class="n">sum_BCA</span> <span class="o">==</span> <span class="n">sum_CAB</span><span class="p">)</span>
+<span class="n">TrABC</span> <span class="o">==</span> <span class="n">TrCAB</span> <span class="o">==</span> <span class="n">TrBCA</span>
 </pre></div>
 
 </div>
@@ -12521,13 +12555,15 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt"></div>
+<div class="prompt output_prompt">Out[163]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>True
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
 </div>
+
 </div>
 
 </div>
@@ -12558,7 +12594,7 @@ $$ \large {\Vert x \Vert}_{2} =  \lgroup {\sum_{i}{\vert x_i \vert}^2 }\rgroup ^
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[427]:</div>
+<div class="prompt input_prompt">In&nbsp;[164]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO 实现这里向量范数计算的函数，要求可以计算p = 0,1,2,3 ... 无穷 情况下的范数</span>
@@ -12604,7 +12640,7 @@ $$ \large {\Vert x \Vert}_{2} =  \lgroup {\sum_{i}{\vert x_i \vert}^2 }\rgroup ^
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[428]:</div>
+<div class="prompt input_prompt">In&nbsp;[165]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> -i -e test.py LinearRegressionTestCase.test_calc_Norm
@@ -12663,7 +12699,7 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[429]:</div>
+<div class="prompt input_prompt">In&nbsp;[166]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO 实现这里矩阵Frobenius范数计算的函数</span>
@@ -12692,7 +12728,7 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[430]:</div>
+<div class="prompt input_prompt">In&nbsp;[167]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> -i -e test.py LinearRegressionTestCase.test_calc_Frobenius_Norm
@@ -12714,7 +12750,7 @@ OK
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>.
 ----------------------------------------------------------------------
-Ran 1 test in 0.001s
+Ran 1 test in 0.003s
 
 OK
 </pre>
@@ -12740,7 +12776,7 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[431]:</div>
+<div class="prompt input_prompt">In&nbsp;[168]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; 计算矩阵的条件数</span>
@@ -12752,7 +12788,10 @@ OK
 <span class="sd">    </span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="k">def</span> <span class="nf">calc_Condition_Number</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
-    <span class="err">？？？？？？</span>
+    <span class="n">A_I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">calc_Frobenius_Norm</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">calc_Frobenius_Norm</span><span class="p">(</span><span class="n">A_I</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
     
 </pre></div>
 
@@ -12760,32 +12799,10 @@ OK
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-431-0d35bab8e63a&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">10</span>
-<span class="ansi-yellow-intense-fg ansi-bold">    ？？？？？？</span>
-<span class="ansi-white-intense-fg ansi-bold">         ^</span>
-<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid character in identifier
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[279]:</div>
+<div class="prompt input_prompt">In&nbsp;[169]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> -i -e test.py LinearRegressionTestCase.test_calc_Condition_Number
@@ -12805,27 +12822,11 @@ OK
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>E
-======================================================================
-ERROR: test_calc_Condition_Number (__main__.LinearRegressionTestCase)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File &#34;C:\Users\zhang\Pictures\Linear-Algebra-cn-master\Linear-Algebra-cn-master\test.py&#34;, line 29, in test_calc_Condition_Number
-    self.assertEqual(Decimal(calc_Condition_Number(test_sample)),250008.00010058272,&#39;Wrong answer&#39;)
-  File &#34;&lt;ipython-input-278-27f18926862a&gt;&#34;, line 11, in calc_Condition_Number
-    return calc_Frobenius_Norm(A) * calc_Frobenius_Norm(A.I)
-  File &#34;&lt;ipython-input-264-bb3a64d9871d&gt;&#34;, line 15, in calc_Frobenius_Norm
-    val = j ** 2
-  File &#34;D:\anaconda\lib\site-packages\numpy\matrixlib\defmatrix.py&#34;, line 322, in __pow__
-    return matrix_power(self, other)
-  File &#34;D:\anaconda\lib\site-packages\numpy\matrixlib\defmatrix.py&#34;, line 139, in matrix_power
-    raise ValueError(&#34;input must be a square array&#34;)
-ValueError: input must be a square array
-
+<pre>.
 ----------------------------------------------------------------------
 Ran 1 test in 0.002s
 
-FAILED (errors=1)
+OK
 </pre>
 </div>
 </div>
@@ -12863,10 +12864,46 @@ $</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>第A题不会</p>
+<p>第A题</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[170]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mf">4.0001</span><span class="p">]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A condition number: &quot;</span><span class="p">,</span><span class="n">calc_Condition_Number</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B condition number: &quot;</span><span class="p">,</span><span class="n">calc_Condition_Number</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A condition number:  14.999999999999998
+B condition number:  250008.00010058272
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12879,7 +12916,7 @@ $</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[432]:</div>
+<div class="prompt input_prompt">In&nbsp;[171]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">vw1</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]])</span>
@@ -12937,7 +12974,7 @@ Scalars in s: [ 3.0001 -1.    ]
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[432]:</div>
+<div class="prompt output_prompt">Out[171]:</div>
 
 
 
@@ -12951,6 +12988,24 @@ Scalars in s: [ 3.0001 -1.    ]
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>第C题</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>矩阵的条件数表示的是对矩阵的一种稳定性的度量，如果条件数很小，那么就表示线性系统很稳定；二如果条件数很大，则表示是一个不稳定的线性系统，其输出的结果也就不可信了。</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -13005,7 +13060,7 @@ $$ w = (X^TX+\lambda I)^{−1}X^Tb $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[433]:</div>
+<div class="prompt input_prompt">In&nbsp;[172]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; 计算任意矩阵的奇异值分解</span>
@@ -13030,7 +13085,7 @@ $$ w = (X^TX+\lambda I)^{−1}X^Tb $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[434]:</div>
+<div class="prompt input_prompt">In&nbsp;[173]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> -i -e test.py LinearRegressionTestCase.test_calc_svd
@@ -13073,7 +13128,7 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[435]:</div>
+<div class="prompt input_prompt">In&nbsp;[174]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO 利用SVD进行对于矩阵进行降维</span>
@@ -13104,7 +13159,7 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[436]:</div>
+<div class="prompt input_prompt">In&nbsp;[175]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> -i -e test.py LinearRegressionTestCase.test_calc_svd_decompostion
@@ -13126,7 +13181,7 @@ OK
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>.
 ----------------------------------------------------------------------
-Ran 1 test in 0.002s
+Ran 1 test in 0.000s
 
 OK
 </pre>
@@ -13147,7 +13202,7 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[437]:</div>
+<div class="prompt input_prompt">In&nbsp;[176]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot; 利用SVD进行对于矩阵进行降维</span>
@@ -13165,7 +13220,8 @@ OK
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="k">def</span> <span class="nf">calc_svd_reconsitution</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">topk</span> <span class="o">=</span> <span class="mi">2</span><span class="p">):</span>
     <span class="n">U</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">VT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">U</span><span class="p">[:,:</span><span class="n">topk</span><span class="p">]</span><span class="o">*</span><span class="n">D</span><span class="p">[:</span><span class="n">topk</span><span class="p">]</span><span class="o">*</span><span class="n">VT</span><span class="p">[:</span><span class="n">topk</span><span class="p">,:]</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,:</span><span class="n">topk</span><span class="p">]</span><span class="o">*</span><span class="n">D</span><span class="p">[:</span><span class="n">topk</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">VT</span><span class="p">[:</span><span class="n">topk</span><span class="p">,:])</span>
 </pre></div>
 
 </div>
@@ -13175,7 +13231,7 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[438]:</div>
+<div class="prompt input_prompt">In&nbsp;[177]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> -i -e test.py LinearRegressionTestCase.test_calc_svd_reconsitution
@@ -13197,7 +13253,7 @@ OK
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>.
 ----------------------------------------------------------------------
-Ran 1 test in 0.001s
+Ran 1 test in 0.000s
 
 OK
 </pre>
@@ -13221,7 +13277,7 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[441]:</div>
+<div class="prompt input_prompt">In&nbsp;[178]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## 不要修改这里！</span>
@@ -13258,7 +13314,7 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[442]:</div>
+<div class="prompt input_prompt">In&nbsp;[179]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss_hist</span> <span class="o">=</span> <span class="p">[]</span>
@@ -13266,9 +13322,9 @@ OK
     <span class="c1"># 5.4 TODO </span>
     <span class="c1">### 1.计算相应的SVD topk降维后的重构矩阵，需实现calc_svd_reconsitution</span>
     <span class="c1">### 2.计算对应的F范数损失，并存储loss放入loss_hist列表中</span>
-    <span class="n">U</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">VT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-    <span class="n">restructure</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,:</span><span class="n">topk</span><span class="p">]</span><span class="o">*</span><span class="n">D</span><span class="p">[:</span><span class="n">topk</span><span class="p">]</span><span class="o">*</span><span class="n">VT</span><span class="p">[:</span><span class="n">topk</span><span class="p">,:]</span>
-    <span class="c1">#A_Ak = A - restructure</span>
+    <span class="n">restructure</span> <span class="o">=</span> <span class="n">calc_svd_reconsitution</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+    <span class="n">A_Ak</span> <span class="o">=</span> <span class="n">A</span> <span class="o">-</span> <span class="n">restructure</span>
+    <span class="n">loss_hist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">calc_Frobenius_Norm</span><span class="p">(</span><span class="n">A_Ak</span><span class="p">))</span>
 <span class="c1">### 画出F损失随着降维大小的变化图</span>
 <span class="c1">### x坐标为对应的降维大小，y坐标为对应的F损失</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">),</span><span class="n">loss_hist</span><span class="p">,</span><span class="s1">&#39;r--&#39;</span><span class="p">)</span>
@@ -13286,22 +13342,42 @@ OK
 
 <div class="output_area">
 
+<div class="prompt output_prompt">Out[179]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Text(0,0.5,&#39;F Loss&#39;)</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">~\Pictures\Linear-Algebra-cn-master\Linear-Algebra-cn-master\test.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-fg">      5</span>     <span class="ansi-red-intense-fg ansi-bold">### 2.计算对应的F范数损失，并存储loss放入loss_hist列表中</span>
-<span class="ansi-green-fg">      6</span>     U<span class="ansi-yellow-intense-fg ansi-bold">,</span>D<span class="ansi-yellow-intense-fg ansi-bold">,</span>VT <span class="ansi-yellow-intense-fg ansi-bold">=</span> np<span class="ansi-yellow-intense-fg ansi-bold">.</span>linalg<span class="ansi-yellow-intense-fg ansi-bold">.</span>svd<span class="ansi-yellow-intense-fg ansi-bold">(</span>A<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 7</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>restructure <span class="ansi-yellow-intense-fg ansi-bold">=</span> U<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">:</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>topk<span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">*</span>D<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>topk<span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">*</span>VT<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>topk<span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-yellow-intense-fg ansi-bold">:</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
-<span class="ansi-green-fg">      8</span>     <span class="ansi-red-intense-fg ansi-bold">#A_Ak = A - restructure</span>
-<span class="ansi-green-fg">      9</span> <span class="ansi-red-intense-fg ansi-bold">### 画出F损失随着降维大小的变化图</span>
-
-<span class="ansi-red-intense-fg ansi-bold">ValueError</span>: operands could not be broadcast together with shapes (506,2) (2,13) </pre>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>D:\anaconda\lib\site-packages\matplotlib\font_manager.py:1328: UserWarning: findfont: Font family [&#39;Microsoft YaHei&#39;] not found. Falling back to DejaVu Sans
+  (prop.get_family(), self.defaultFamily[fontext]))
+</pre>
 </div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYgAAAEKCAYAAAAIO8L1AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMi4yLCBodHRwOi8vbWF0cGxvdGxpYi5vcmcvhp/UCwAAGeZJREFUeJzt3X2YHnV97/H3x0QhQXkobD2SpAYr4EFaqd1SRG3V4GmhSmzxIV6iaLGxiqVQ7QN9OOhp7ZNYrZ5L2xTxgVoEI2hq0aJgpadV6PIgJGA0FiEBimtVaItSwe/5Y36RzWaSLLCzdxLfr+u6r535zW/m/s5ms5+dmXvml6pCkqTpHjbqAiRJOycDQpLUy4CQJPUyICRJvQwISVIvA0KS1MuAkCT1MiAkSb0MCElSr/mjLuChOOCAA2rp0qWjLkOSdilXXXXV16pqbEf9dumAWLp0KRMTE6MuQ5J2KUlunkk/TzFJknoZEJKkXoMGRJLTk6xLsjbJeUn2nLLsHUn+c8r8HknOT7IhyRVJlg5ZmyRp+wYLiCSLgFOB8ao6HJgHrGjLxoF9p61yMvCNqno88FbgT4aqTZK0Y0OfYpoPLEgyH1gI3JZkHvBm4Dem9V0OvK9NrwaWJcnA9UmStmGwgKiqW4GzgFuA24E7q+oS4LXAmqq6fdoqi4CNbd17gTuB/YeqT5K0fUOeYtqP7qjgIOBAYK8kLwNeALyjb5Wetq2Gu0uyMslEkonJycnZLFmSNMWQp5iOAW6qqsmq+g5wIfBG4PHAhiRfARYm2dD6bwKWALRTUvsAX5++0apaVVXjVTU+NrbD+zwkSQ/SkAFxC3BUkoXtWsIy4M+q6n9U1dKqWgrc3S5KA6wBTmrTzwcuKwfMlqSRGexO6qq6Islq4GrgXuAaYNV2Vnk3cG47ovg67RNPkqTRGPRRG1V1JnDmdpY/csr0t+muT0iSdgLeSS1J6mVASJJ6GRCSpF4GhCSplwEhSeplQEiSehkQkqReBoQkqZcBIUnqZUBIknoZEJKkXgaEJKmXASFJ6mVASJJ6GRCSpF4GhCSp16ABkeT0JOuSrE1yXpI9k7w7yeeTXJdkdZJHtr57JDk/yYYkVyRZOmRtkqTtGywgkiwCTgXGq+pwYB7dMKKnV9WTqupH6catfm1b5WTgG22M6rcCfzJUbZKkHRv6FNN8YEGS+cBC4LaqugsgSYAFQLW+y4H3tenVwLLWR5I0AoMFRFXdCpxFd5RwO3BnVV0CkOQ9wL8BTwDe0VZZBGxs694L3AnsP327SVYmmUgyMTk5OVT5kvR9b8hTTPvRHRUcBBwI7JXkRICqekVruxF40eZVejZTWzVUraqq8aoaHxsbG6R2SdKwp5iOAW6qqsmq+g5wIXD05oVVdR9wPnBCa9oELAFop6T2Ab4+YH2SpO0YMiBuAY5KsrBdS1gG3Jjk8fC9axDPBb7Q+q8BTmrTzwcuq6qtjiAkSXNj/lAbrqorkqwGrgbuBa4BVgGXJdmb7pTS54FXt1XeDZybZAPdkcOKoWqTJO3YYAEBUFVnAmdOa37qNvp+G3jBkPVIkmbOO6klSb0MCElSLwNCktTLgJAk9TIgJEm9DAhJUi8DQpLUy4CQJPUyICRJvQwISVIvA0KS1MuAkCT1MiAkSb0MCElSLwNCktRr0IBIcnqSdUnWJjkvyZ5JPpBkfWs7J8nDW98keXuSDUmuS/LkIWuTJG3fYAGRZBFwKjBeVYcD8+hGifsA8ATgR4AFwCvbKscCB7fXSuBdQ9UmSdqxoU8xzQcWJJkPLARuq6qLqwGuBBa3vsuB97dFnwP2TfKYgeuTJG3DYAFRVbcCZwG3ALcDd1bVJZuXt1NLLwU+0ZoWARunbGJTa5MkjcCQp5j2ozsqOAg4ENgryYlTurwTuLyq/nHzKj2bqZ7trkwykWRicnJytsuWJDVDnmI6Bripqiar6jvAhcDRAEnOBMaAX5vSfxOwZMr8YuC26RutqlVVNV5V42NjY4MVL0nf74YMiFuAo5IsTBJgGXBjklcCPwO8uKq+O6X/GuBl7dNMR9Gdkrp9wPokSdsxf6gNV9UVSVYDVwP3AtcAq4D/Am4GPtvlBhdW1f8BLgaOAzYAdwOvGKo2SdKODRYQAFV1JnDmTN6zfarplCHrkSTNnHdSS5J6GRCSpF4GhCSplwEhSeplQEiSehkQkqReBoQkqZcBIUnqZUBIknoZEJKkXgaEJKmXASFJ6mVASJJ6GRCSpF4GhCSplwEhSeo1aEAkOT3JuiRrk5yXZM8kr02yIUklOWBK3yR5e1t2XZInD1mbJGn7BguIJIuAU4HxqjocmAesAP4JOIZu2NGpjgUObq+VwLuGqk2StGODDjnatr8gyXeAhcBtVXUNQBuPeqrlwPvb0KOfS7JvksdU1e0D1yhJ6jHYEURV3QqcBdwC3A7cWVWXbGeVRcDGKfObWpskaQSGPMW0H91RwUHAgcBeSU7c3io9bdWz3ZVJJpJMTE5Ozk6xkqStDHmR+hjgpqqarKrvABcCR2+n/yZgyZT5xcBt0ztV1aqqGq+q8bGxsVktWJJ0vyED4hbgqCQL011wWAbcuJ3+a4CXtU8zHUV3SsrrD5I0IkNeg7gCWA1cDVzf3mtVklOTbKI7QrguydltlYuBfwU2AH8FvGao2iRJO5buQ0O7pvHx8ZqYmBh1GZK0S0lyVVWN76ifd1JLknoZEJKkXgaEJKmXASFJ6mVASJJ6GRCSpF4GhCSplwEhSeq1w4BIsleSh7XpQ5Icn+Thw5cmSRqlmRxBXA7s2QYAuhR4BfDeIYuSJI3eTAIiVXU38AvAO6rq54HDhi1LkjRqMwqIJE8BXgL8XWsbeiQ6SdKIzSQgTgPOAC6qqnVJHgd8etiyJEmjtsMjgar6DPAZgHax+mtVderQhUmSRmsmn2L6myR7J9kLuAFYn+TXhy9NkjRKMznFdFhV3QU8j25Qnx8CXjpoVZKkkZtJQDy83ffwPOCjbXzpGY0ylOT0JOuSrE1yXpI9kxyU5IokX0pyfpJHtL57tPkNbfnSB7tTkqSHbiYB8ZfAV4C9gMuTPBa4a0crtfsmTgXGq+pwYB6wAvgT4K1VdTDwDeDktsrJwDeq6vHAW1s/SdKI7DAgqurtVbWoqo6rzs3AM2e4/fnAgiTzgYXA7cCz6MaqBngf3ZEJwPI2T1u+LElm+D6SpFk2k4vU+yT5syQT7fUWuqOJ7aqqW4GzgFvoguFO4Crgm1V1b+u2CVjUphcBG9u697b++z/A/ZEkzZKZnGI6B/gP4IXtdRfwnh2tlGQ/uqOCg4AD6ULl2J6um69n9B0tbHWtI8nKzWE1OTk5g/IlSQ/GTO6I/uGqOmHK/BuTXDuD9Y4BbqqqSYAkFwJHA/smmd+OEhYDt7X+m4AlwKZ2Smof4OvTN1pVq4BVAOPj4zO6WN7rGc/Yuu2FL4TXvAbuvhuOO27r5S9/eff62tfg+c/fevmrXw0vehFs3Agv7fmg1+teB899LqxfD6961dbLf/d34Zhj4Npr4bTTtl7+h38IRx8N//zP8Nu/vfXyt70NjjgCPvUp+IM/2Hr5X/4lHHoo/O3fwlvesvXyc8+FJUvg/PPhXe/aevnq1XDAAfDe93av6S6+GBYuhHe+Ey64YOvl//AP3dezzoKPfWzLZQsWwMc/3k3//u/DpZduuXz//eHDH+6mzzgDPvvZLZcvXgx//dfd9Gmndd/DqQ45BFat6qZXroQvfnHL5Ucc0X3/AE48ETZt2nL5U54Cf/RH3fQJJ8C///uWy5ctg9/7vW762GPhW9/acvlzngOvf3037c/e1sv92eumH8jP3uZ9GtBMjiC+leRpm2eSPBX41nb6b3YLcFSShe1awjK6+yg+DWz+CT8J+GibXtPmacsvq6oHHwCSpIckO/odnORJwPvp/qKH7pNHJ1XVdTvcePJG4EXAvcA1wCvprjV8EPiB1nZiVd2TZE/gXODH6I4cVlTVv25v++Pj4zUxMbGjMiRJUyS5qqrGd9hvpn+kJ9kboKruSnJCVX34Idb4kBkQkvTAzTQgZjyiXFXd1e6ohu4+BUnSbuzBDjnq/QmStJt7sAHhxWNJ2s1t82OuSa6nPwgCPHqwiiRJO4Xt3QfxnDmrQpK009lmQLRnLkmSvk892GsQkqTdnAEhSeq1zYBI8kNzWYgkaeeyvSOIj2yeSDLyu6YlSXNrewEx9Wa4xw1diCRp57K9gKhtTEuSvg9s7z6IJyW5i+5IYkGbps1XVe09eHWSpJHZ3n0Q8+ayEEnSzsWPuUqSehkQkqRegwVEkkOTXDvldVeS05I8Kclnk1yf5G83D0TU1jkjyYYk65P8zFC1SZJ2bLCAqKr1VXVEVR0B/DhwN3ARcDbwW1X1I23+1wGSHAasAJ4I/CzwziReB5GkEZmrU0zLgC+3BwAeClze2j8JnNCmlwMfrKp7quomYANw5BzVJ0maZq4CYgVwXpteCxzfpl8ALGnTi4CNU9bZ1Nq2kGRlkokkE5OTkwOVK0kaPCCSPIIuED7Umn4ROCXJVcCjgP/e3LVn9a1u0KuqVVU1XlXjY2NjQ5QsSWL7N8rNlmOBq6vqDoCq+gLwvwCSHAL8XOu3ifuPJgAWA7fNQX2SpB5zcYrpxdx/eokkP9i+Pgz4XeAv2qI1wIokeyQ5CDgYuHIO6pMk9Rg0IJIsBJ4NXDil+cVJvgh8ge4I4T0AVbUOuAC4AfgEcEpV3TdkfZKkbUvVrvscvvHx8ZqYmBh1GZK0S0lyVVWN76ifd1JLknoZEJKkXgaEJKmXASFJ6mVASJJ6GRCSpF4GhCSplwEhSeplQEiSehkQkqReBoQkqZcBIUnqZUBIknoZEJKkXgaEJKnXYAGR5NAk10553ZXktCRHJPlca5tIcmTrnyRvT7IhyXVJnjxUbZKkHRtsTOqqWg8cAZBkHnArcBHwV8Abq+rjSY4D/hR4Bt3Y1Qe3108C72pfJUkjMFenmJYBX66qm4EC9m7t+9ANOwqwHHh/dT4H7JvkMXNUnyRpmsGOIKZZAZzXpk8D/j7JWXQBdXRrXwRsnLLOptZ2+xzVKEmaYvAjiCSPAI4HPtSaXg2cXlVLgNOBd2/u2rP6VgNmJ1nZrl1MTE5ODlGyJIm5OcV0LHB1Vd3R5k8CLmzTHwKObNObgCVT1lvM/aefvqeqVlXVeFWNj42NDVSyJGkuAuLF3H96Cbpf+j/dpp8FfKlNrwFe1j7NdBRwZ1V5ekmSRmTQaxBJFgLPBl41pfmXgD9PMh/4NrCytV8MHAdsAO4GXjFkbZKk7Rs0IKrqbmD/aW3/D/jxnr4FnDJkPZKkmfNOaklSLwNCktTLgJAk9TIgJEm9DAhJUi8DQpLUy4CQJPUyICRJvQwISVIvA0KS1MuAkCT1MiAkSb0MCElSLwNCktTLgJAk9TIgJEm9BhswKMmhwPlTmh4H/G/gKcChrW1f4JtVdURb5wzgZOA+4NSq+vuh6pMkbd9gAVFV64HNv/jnAbcCF1XV2zb3SfIW4M42fRiwAngicCDwqSSHVNV9Q9UoSdq2uTrFtAz4clXdvLkhSYAXAue1puXAB6vqnqq6iW5s6iPnqD5J0jRzFRAruD8INns6cEdVfanNLwI2Tlm+qbVJkkZg8IBI8gjgeOBD0xa9mC1DIz2rV8/2ViaZSDIxOTk5e4VKkrYwF0cQxwJXV9UdmxuSzAd+gS0vYm8ClkyZXwzcNn1jVbWqqsaranxsbGygkiVJcxEQ048UAI4BvlBVm6a0rQFWJNkjyUHAwcCVc1CfJKnHYJ9iAkiyEHg28Kppi7a6JlFV65JcANwA3Auc4ieYJGl0Bg2Iqrob2L+n/eXb6P8m4E1D1iRJmhnvpJYk9TIgJEm9DAhJUi8DQpLUy4CQJPUyICRJvQwISVIvA0KS1MuAkCT1MiAkSb0MCElSLwNCktTLgJAk9TIgJEm9DAhJUi8DQpLUa7CASHJokmunvO5Kclpb9itJ1idZl+RPp6xzRpINbdnPDFWbJGnHBhtRrqrWA0cAJJkH3ApclOSZwHLgR6vqniQ/2PocRjcU6ROBA4FPJTnEYUclaTTm6hTTMuDLVXUz8Grgj6vqHoCq+mrrsxz4YFXdU1U3ARuAI+eoPknSNHMVECuA89r0IcDTk1yR5DNJfqK1LwI2TllnU2vbQpKVSSaSTExOTg5atCR9Pxs8IJI8Ajge+FBrmg/sBxwF/DpwQZIA6Vm9tmqoWlVV41U1PjY2NlDVkqS5OII4Fri6qu5o85uAC6tzJfBd4IDWvmTKeouB2+agPklSj7kIiBdz/+klgI8AzwJIcgjwCOBrwBpgRZI9khwEHAxcOQf1SZJ6DPYpJoAkC4FnA6+a0nwOcE6StcB/AydVVQHrklwA3ADcC5ziJ5gkaXQGDYiquhvYf1rbfwMnbqP/m4A3DVmTJGlmvJNaktTLgJAk9TIgJEm9DAhJUi8DQpLUy4CQJPUyICRJvdLdo7ZrSjIJ3DzqOmboALo7xndHu/O+we69f+7bruuh7N9jq2qHD7PbpQNiV5JkoqrGR13HEHbnfYPde//ct13XXOyfp5gkSb0MCElSLwNi7qwadQED2p33DXbv/XPfdl2D75/XICRJvTyCkCT1MiAGlmRJkk8nuTHJuiS/OuqaZluSeUmuSfKxUdcym5Lsm2R1ki+0f7+njLqm2ZTk9PYzuTbJeUn2HHVND1aSc5J8tY0zs7ntB5J8MsmX2tf9RlnjQ7GN/Xtz+9m8LslFSfad7fc1IIZ3L/C6qvqfdONwn5LksBHXNNt+Fbhx1EUM4M+BT1TVE4AnsRvtY5JFwKnAeFUdDswDVoy2qofkvcDPTmv7LeDSqjoYuLTN76rey9b790ng8Kr6UeCLwBmz/aYGxMCq6vaqurpN/wfdL5lFo61q9iRZDPwccPaoa5lNSfYGfgp4N3QDXVXVN0db1aybDyxIMh9YyC48BnxVXQ58fVrzcuB9bfp9wPPmtKhZ1Ld/VXVJVd3bZj8HLJ7t9zUg5lCSpcCPAVeMtpJZ9TbgN4DvjrqQWfY4YBJ4Tzt9dnaSvUZd1GypqluBs4BbgNuBO6vqktFWNeseXVW3Q/eHGvCDI65nSL8IfHy2N2pAzJEkjwQ+DJxWVXeNup7ZkOQ5wFer6qpR1zKA+cCTgXdV1Y8B/8WufYpiC+18/HLgIOBAYK8kvUMBa+eW5HfoTmV/YLa3bUDMgSQPpwuHD1TVhaOuZxY9FTg+yVeADwLPSvLXoy1p1mwCNlXV5qO91XSBsbs4Bripqiar6jvAhcDRI65ptt2R5DEA7etXR1zPrEtyEvAc4CU1wD0LBsTAkoTuPPaNVfVno65nNlXVGVW1uKqW0l3gvKyqdou/Qqvq34CNSQ5tTcuAG0ZY0my7BTgqycL2M7qM3egifLMGOKlNnwR8dIS1zLokPwv8JnB8Vd09xHsYEMN7KvBSur+ur22v40ZdlGbkV4APJLkOOAL4wxHXM2vakdFq4GrgerrfBbvsncdJzgM+CxyaZFOSk4E/Bp6d5EvAs9v8Lmkb+/d/gUcBn2y/V/5i1t/XO6klSX08gpAk9TIgJEm9DAhJUi8DQpLUy4CQJPUyILTLSPKGJK8fdR0PVpKL2xNi903ymintByZZPeD7/nKSlw21fe2+/JirdhlJ3gD8Z1WdNepaHor2TK6PtaeoSjstjyC0U0vyO0nWJ/kUcOiU9h9O8okkVyX5xyRPaO2Pbs/G/3x7Hd3af62Ne7A2yWmtbWl7nv7Zrf0DSY5J8k9tDIEjW783JDk3yWWt/Zdae9oz+dcmuT7Ji1r7Y5Jc3m5eWpvk6a39K0kOoLth64fb8je3Ota2PnsmeU/b3jVJntnaX57kwrbPX0ryp9v4fv1xkhvaGAFnTan/9e1I5dopr/uSPDbJWJIPJ/mX9nrqAP+U2hVVlS9fO+UL+HG6u3wXAnsDG4DXt2WXAge36Z+ke8wHwPl0D0SEboyDfaZsZy/gkcA6uqfqLqV7yNmP0P2xdBVwDhC6B9l9pG3nDcDngQXAAcBGugfcnUD3TP55wKPpHl/xGOB1wO9MqeFRbforbf2lwNop+/m9+bbue9r0E9o29wReDvxr2589gZuBJdO+Xz8ArOf+MwP7Tqn/9dP6ngJc0Kb/Bnham/4husfCjPzf39foX/N3FCDSCD0duKjac2aSrGlfH0n3YLkPdY8RAmCP9vVZwMsAquo+4M4kT2vb+a+2/oVt22voHlh3fWtfRzfATCW5nu4X92YfrapvAd9K8mngSOBpwHntfe5I8hngJ4B/Ac5pD2n8SFVd+wD2+WnAO1r9X0hyM3BIW3ZpVd3Zar0BeCxdWG12F/Bt4Owkfwf0jvDXjhBe2b4H0D2477Ap38u9kzyquvFL9H3MgNDOru8i2cOAb1bVETPcRraz7J4p09+dMv9dtvz/Mb2O2tZ2q+ryJD9FN5DSuUneXFXvn+Va75tWH1V1bzsttozu4YmvpQvM+zfePdX03XQPePvP1vww4CktAKXv8RqEdmaXAz+fZEGSRwHPBahuPI2bkrwAvnct4EltnUuBV7f2eelGhrsceF66J5fuBfw88I8PsJbl7frA/sAz6I4SLgde1N5njG4EuiuTPJZunIy/ovtlPP0x4f9B95C1be3zS1r9h9Cd8lk/kwLbkdU+VXUxcBrdAwanLn84cAHwm1X1xSmLLqELk839Zhq82s0ZENppVTdU6/nAtXTjaUz9pf4S4OQkn6e7prC8tf8q8Mx2iugq4IltO+8FrqQbze/sqrrmAZZzJfB3dEM7/n5V3QZcBFxHd33iMuA3qntM+DOAa5NcQ3ed4s+n7de/A//ULmC/edr7vBOY1+o/H3h5Vd3DzDwK+Fi6p89+Bjh92vKj6U6BvXHKheoDaWNTtwvbNwC/PMP3027Oj7lKO5Dd5OO10gPlEYQkqZdHEJKkXh5BSJJ6GRCSpF4GhCSplwEhSeplQEiSehkQkqRe/x/LTy9I+p0GBAAAAABJRU5ErkJggg==
+"
+>
+</div>
+
 </div>
 
 </div>
@@ -13328,7 +13404,7 @@ OK
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[443]:</div>
+<div class="prompt input_prompt">In&nbsp;[181]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 5.5 TODO</span>
@@ -13372,7 +13448,7 @@ VT shape:  (700, 700)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[444]:</div>
+<div class="prompt input_prompt">In&nbsp;[182]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#请在U，D，V变量完成的情况下调用此测试程序，不要修改此处</span>
